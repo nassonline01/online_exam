@@ -23,5 +23,6 @@ urlpatterns = [
     path('',views.Index,name='Index'),
     path('reg/',views.Register,name='Register'),
     path('log/',views.Login,name='Login'),
+    path('view/',views.View,name='View'),
 
 ]
