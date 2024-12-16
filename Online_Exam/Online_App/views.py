@@ -39,4 +39,4 @@ def View(request):
         data = User.objects.get(username=request.user)
     except:
         return HttpResponse("<script>window.alert('Problem with username');</script>")
-    return render(request,'dashboard.html',{'data':data})
+    return render(request,'admin-dashboard.html',{'data':data})
