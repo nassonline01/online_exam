@@ -4,7 +4,7 @@ User = get_user_model()
 from django.conf import settings
 settings.AUTH_USER_MODEL
 from Online_App.models import CustomUser
-from django.contrib.auth import authenticate ,login
+from django.contrib.auth import authenticate ,login ,logout
 
 def Index(request):
     return render(request,'index.html')
@@ -34,9 +34,48 @@ def Login(request):
     else:
         return render(request,'login.html')
     
+# def View(request):
+#     try:
+#         data = User.objects.get(username=request.user)
+#     except:
+#         ShowCounts()
+#         return HttpResponse("<script>window.alert('Problem with username');</script>")
+#     return render(request,'admin-dashboard.html',{'data':data})
+
+# def ShowCounts(request):
+#     Student_count = User.objects.filter(usertype_id=4).count()
+#     Staff_count = User.objects.filter(usertype_id=2).count()
+#     print("counts are",Student_count,Staff_count)
+#     Details ={
+#         'Student_count':1,
+#         'Staff_count':2
+#     }
+#     # import pdb ; pdb.set_trace()
+#     return render(request,'admin-dashboard.html',Details)
+
 def View(request):
     try:
+        # Fetch user data
         data = User.objects.get(username=request.user)
-    except:
+
+        # Fetch counts
+        Student_count = User.objects.filter(usertype_id=4).count()
+        Staff_count = User.objects.filter(usertype_id=2).count()
+        
+        print("Counts are:", Student_count, Staff_count,flush=True)
+        
+        # Pass both user details and counts to the template
+        context = {
+            'data': data,
+            'Student_count': Student_count,
+            'Staff_count': Staff_count
+        }
+    except User.DoesNotExist:
         return HttpResponse("<script>window.alert('Problem with username');</script>")
-    return render(request,'admin-dashboard.html',{'data':data})
+
+    return render(request, 'admin-dashboard.html', context)
+
+def Logout(request):
+    logout(request)
+    return HttpResponse("<script>window.alert('Logged out Successfully');window.location.href='/reg/';</script>")
+    

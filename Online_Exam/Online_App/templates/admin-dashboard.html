@@ -9,6 +9,12 @@
 <body>
     <header>
         <img src="/static/images/nassonline.jpg" alt="file not exist" width="200px">
+        <h3 class="welcome">Welcome Admin , {{ data.username }} <br>
+            <form action="{% url 'Logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">LOGOUT</button>
+            </form>
+        </h3>
     </header>
 <hr>
     <div class="container">
@@ -70,17 +76,17 @@
         </aside>
 
         <main>
-            <h3 class="welcome">Welcome Admin , {{ data.username }}</h3>
+            <h3 class="hi">Dashboard</h3>
             <div class="number-box">
                 <div>
                     <img src="/static/dashboard/graduated.png" alt="no image">
                     <h4>Total Students</h4>
-                    <h4>#</h4>
+                    <h4>{{ Student_count }}</h4>
                 </div>
                 <div>
                     <img src="/static/dashboard/staff.png" alt="no image">
                     <h4>Total Staffs</h4>
-                    <h4>#</h4>
+                    <h4>{{ Staff_count }}</h4>
                 </div>
                 <div>
                     <img src="/static/dashboard/course.png" alt="no image">

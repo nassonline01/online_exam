@@ -18,15 +18,19 @@ Menu.addEventListener('click',()=>{
 const openPopup = document.querySelector('.popup-btn')
 const closePopup = document.querySelector('.close-popup')
 const Overlay = document.querySelector('.overlay')
+const body = document.body;
 
 openPopup.addEventListener('click',()=>{
         Overlay.style.display='flex';
+        // document.body.classList.add("no-scroll");
+        body.style.overflow = 'hidden';
 });
 closePopup.addEventListener('click',()=>{
     Overlay.style.display='none';
+    body.style.overflow = 'auto';
 });
 Overlay.addEventListener('click',(e)=>{
-    if(e.target===Overlay){Overlay.style.display='none';}
+    if(e.target===Overlay){Overlay.style.display='none';body.style.overflow = 'auto';}
 });
 
 //Gallery View
@@ -60,3 +64,9 @@ function previewImage(){
     showImage();
 }
 showImage();
+
+// Down Arrow Animation
+
+setTimeout(() => {
+    document.getElementById('down-arrow').style.display = 'none';
+  }, 2000); 
