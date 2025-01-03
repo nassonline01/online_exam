@@ -1,7 +1,7 @@
 header img{
     border-radius: 15px;
 }
-.container{
+.container2{
     display: flex;
     flex: 1;
 }
@@ -34,44 +34,26 @@ aside ul li{
 aside ul li:hover{
     background-color: #0f798a;
 }
-.dropdown-menu3{
+.dropdown-menu3 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 10px;
     opacity: 0;
     visibility: hidden;
     max-height: 0;
-    margin-top: 5px;
-    padding-left: 20px;
     transition: opacity 0.3s ease, max-height 0.3s ease;
+    overflow: hidden;
 }
-.dropdown-menu3 li {
-    background-color: #4b64d3;
-    margin: 3px 0;
-    border-radius: 5px;
-}
-.dropdown-menu3 li:hover {
-    background-color: #0d3168;
-}
-.dropdown.active .dropdown-menu3{
+
+.dropdown.active .dropdown-menu3 {
     opacity: 1;
     visibility: visible;
-    max-height: 200px;
+    max-height: 500px; /* Adjust height as needed */
 }
-.sub-dropdown-menu4{
-    display: none;
-    padding-left: 15px;
-    transition: max-height 0.3s ease;
-    overflow: hidden;
-    max-height: 0;
-}
-.sub-dropdown-menu4 li{
-    background-color: #07530b;
-}
-.sub-dropdown-menu4 li:hover{
-    background-color: #147219;
-}
-.sub-dropdown.active > .sub-dropdown-menu4 {
-    display: block;
-    max-height: 150px;
-}
+
+
 a button {
     background-color: #024e59;
     color: #f0e2e2;
@@ -86,10 +68,38 @@ a button {
 a button:hover {
     background-color: #013740;
 }
-.buttons-container {
+.buttons-container2 {
     position: absolute;
     display: flex;
     justify-content: flex-end;
     gap: 10px; 
     margin-left: 85%;
 }
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }

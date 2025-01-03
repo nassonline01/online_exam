@@ -7,6 +7,38 @@
     <link rel="stylesheet" href="/static/file/profile.css">
 </head>
 <body>
-    
+    <form>  
+        <div class="container">  
+            <center>  <h1>Profile</h1> </center>  
+            <hr>  
+            <label> Firstname </label>   
+            <input type="text" name="firstname" placeholder= "Firstname" size="5" required />    
+            <label> Lastname: </label>    
+            <input type="text" name="lastname" placeholder="Lastname" size="15"required />   
+         <div> 
+            <label> Gaurdian Name: </label>    
+            <input type="text" name="gaurdian" placeholder="Gaurdian Name" size="15"required /> 
+            <label> Gaurdian's Phone : </label>     
+            <input type="text" name="country code" placeholder="Country Code"  value="+91" size="2"/>   
+            <label>   
+            Gender :  
+            </label><br>  
+            <input type="radio" value="Male" name="gender" checked > Male   
+            <input type="radio" value="Female" name="gender"> Female   
+            <input type="radio" value="Other" name="gender"> Other          
+        </div>  
+        <label>   
+        Phone :  
+        </label>  
+        <input type="text" name="country code" placeholder="Country Code"  value="+91" size="2"/> 
+        <label for="email"><b>Email</b></label>  
+        <input type="text" placeholder="Enter Email" name="email" required>     
+        Current Address :  
+        <textarea cols="80" rows="5" placeholder="Current Address" value="address" required>  
+        </textarea>  
+       
+            
+            <button type="submit" class="registerbtn">Register</button>    
+    </form> 
 </body>
 </html>

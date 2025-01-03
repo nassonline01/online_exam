@@ -42,3 +42,5 @@ def View(request):
     return render(request,'admin-dashboard.html',{'data':data})
 def Student(request):
     return render(request,'student.html')
+def Profile(request):
+    return render(request,'Profile.html')

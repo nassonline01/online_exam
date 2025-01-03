@@ -7,33 +7,60 @@
     <link rel="stylesheet" href="/static/file/student.css">
 </head>
 <body>
+    <div class="buttons-container2" >
+        <a href="{% url 'Login' %}" ><button class="reg">LogOut</button></a>
+    </div>
     <header>
         <img src="/static/images/nassonline.jpg" alt="file not exist" width="200px">
+      
+    <hr>
     </header>
-<hr>
-    <div class="container">
-        <div class="buttons-container" >
-            <a href="{% url 'Login' %}" ><button class="reg">LogOut</button></a>
-        </div>
+    
+    <div class="container2">
+        
     <aside>
         <ul>
-            <li class="dropdown2"><img src="/static/dashboard/dashboard.png" alt="">Student
-                <ul class="dropdown-menu3">
-                    <li class="sub-dropdown4">Staffs
-                        <ul class="sub-dropdown-menu">
-                            <li>Overview</li>
-                        </ul>
-                    </li> 
-                </li>
-            </ul>
-        </li>
-        <li class="dropdown2"><img src="/static/dashboard/student.png" alt="">  Students
-            <ul class="dropdown-menu3">
-                <li>Manage</li>
-                <li>Add Plan</li>
-            </ul>
-        </li>
+            <li class="dropdown2"><img src="/static/dashboard/dashboard.png" alt=""> Profile</li>
+            
+            <li class="dropdown">
+                <img src="/static/dashboard/student.png" alt=""> Packages
+                    <ul class="dropdown-menu3">
+                    <li>
+                        <div class="card">
+                            <img src="/static/images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+                            <h1>Tailored Jeans</h1>
+                            <p class="price">$19.99</p>
+                            <p>Some text about the jeans..</p>
+                            <p><button>Add to Cart</button></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <img src="/static/images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+                            <h1>Tailored Jeans</h1>
+                            <p class="price">$19.99</p>
+                            <p>Some text about the jeans..</p>
+                            <p><button>Add to Cart</button></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <img src="/static/images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+                            <h1>Tailored Jeans</h1>
+                            <p class="price">$19.99</p>
+                            <p>Some text about the jeans..</p>
+                            <p><button>Add to Cart</button></p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            
+        </li>        
+    </ul>
+        
+        
     </aside>     
-    </div>    
+    </div>  
+    <script src="static/file/student.js"></script>  
 </body>
 </html>
