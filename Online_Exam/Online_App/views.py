@@ -40,3 +40,5 @@ def View(request):
     except:
         return HttpResponse("<script>window.alert('Problem with username');</script>")
     return render(request,'admin-dashboard.html',{'data':data})
+def Student(request):
+    return render(request,'student.html')

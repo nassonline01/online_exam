@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="/static/file/student.css">
+</head>
+<body>
+    <header>
+        <img src="/static/images/nassonline.jpg" alt="file not exist" width="200px">
+    </header>
+<hr>
+    <div class="container">
+        <div class="buttons-container" >
+            <a href="{% url 'Login' %}" ><button class="reg">LogOut</button></a>
+        </div>
+    <aside>
+        <ul>
+            <li class="dropdown2"><img src="/static/dashboard/dashboard.png" alt="">Student
+                <ul class="dropdown-menu3">
+                    <li class="sub-dropdown4">Staffs
+                        <ul class="sub-dropdown-menu">
+                            <li>Overview</li>
+                        </ul>
+                    </li> 
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown2"><img src="/static/dashboard/student.png" alt="">  Students
+            <ul class="dropdown-menu3">
+                <li>Manage</li>
+                <li>Add Plan</li>
+            </ul>
+        </li>
+    </aside>     
+    </div>    
+</body>
+</html>
