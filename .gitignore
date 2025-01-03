@@ -1,12 +1,29 @@
  
+# Env files
+env1/
 env/
 
-*.pyc
-
+# Migrations and Caches
 __pycache__/
+*.pyc
+**/migrations/*.py
 
-.log
+# Exception
+!**/migrations/__init__.py  
 
+# Database
+db.sqlite3
+db.sqlite3-journal
+
+# log files
+*.log
+
+# Vs Code files
 .vscode/
 
-.idea
+# OS-specific files 
+.DS_Store
+Thumbs.db
+
+# Uploaded Images
+media/
